@@ -22,11 +22,11 @@
 <!--
   Página del QR de los PDF de Wibblo.
   - Android: redirige a Google Play.
-  - iPhone/iPad: redirige al App Store si el botón de App Store tiene href;
-    si no, muestra "Muy pronto en iPhone y iPad" y el botón de Google Play.
-  - Computadora o sin JavaScript: muestra los botones.
-  Cuando exista la app en el App Store: poner su URL en el href de los dos
-  botones .appstore (es/en) y quitarles el atributo hidden. Nada más.
+  - iPhone/iPad: redirige al App Store (Apple ID 6819557562).
+  - Computadora o sin JavaScript: muestra los dos botones.
+  Si la app deja de estar en el App Store, vaciar appStore en el script y
+  volver a ocultar los botones .appstore: en iPhone se muestra entonces
+  "Muy pronto en iPhone y iPad" con el botón de Google Play.
 -->
 <script>
   (function () {
@@ -42,14 +42,12 @@
     var ios = /iPhone|iPad|iPod/i.test(ua) ||
       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     var play = 'https://play.google.com/store/apps/details?id=com.kaeli.wibblo';
+    var appStore = 'https://apps.apple.com/app/id6819557562';
     if (android) { location.replace(play); return; }
     if (ios) {
       html.className += ' ios';
-      document.addEventListener('DOMContentLoaded', function () {
-        var a = document.querySelector('.appstore');
-        var url = a && a.getAttribute('href');
-        if (url) location.replace(url); else html.className += ' ios-soon';
-      });
+      if (appStore) { location.replace(appStore); return; }
+      html.className += ' ios-soon';
     }
   })();
 </script>
@@ -90,7 +88,7 @@
     <p class="soon">Muy pronto en iPhone y iPad</p>
     <div class="stores">
       <a class="store" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><small>Disponible en</small>Google Play</a>
-      <a class="store appstore" href="" hidden><small>Disponible en el</small>App Store</a>
+      <a class="store appstore" href="https://apps.apple.com/app/id6819557562"><small>Disponible en el</small>App Store</a>
     </div>
     <p class="links"><a href="privacidad/">Política de privacidad</a><a href="#en">English</a></p>
   </section>
@@ -101,7 +99,7 @@
     <p class="soon">Coming soon to iPhone and iPad</p>
     <div class="stores">
       <a class="store" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><small>Available on</small>Google Play</a>
-      <a class="store appstore" href="" hidden><small>Available on the</small>App Store</a>
+      <a class="store appstore" href="https://apps.apple.com/app/id6819557562"><small>Available on the</small>App Store</a>
     </div>
     <p class="links"><a href="privacidad/#en">Privacy Policy</a><a href="#es">Español</a></p>
   </section>
