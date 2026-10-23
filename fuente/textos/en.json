@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "title": "Wibblo: printable worksheets and activities",
+    "description": "Make bingo cards, word searches, crosswords and 9 more activities with your own words or ready-made content, and export them to PDF to print at home.",
+    "language": "English"
+  },
+  "nav": {
+    "generators": "Activities",
+    "examples": "Examples",
+    "tutorials": "Tutorials",
+    "plans": "Free and Pro",
+    "faq": "FAQ",
+    "download": "Download",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Turn your ideas into printable activities.",
+    "text": "Bingo, word search, crosswords and 9 more activities. Type your own words or use ready-made content, then export to PDF to print at home, at a party or anywhere you like.",
+    "mascot_alt": "Wibblo, the app's mascot, waving",
+    "your_store": "Your store"
+  },
+  "badges": {
+    "app_store_alt": "Download on the App Store",
+    "google_play_alt": "Get it on Google Play"
+  },
+  "generators": {
+    "title": "12 activities in one app",
+    "intro": "Pick one, type your content and Wibblo builds the worksheet for you.",
+    "categories": {
+      "games": "Games",
+      "activities": "Activities",
+      "math": "Math"
+    },
+    "items": {
+      "bingo": ["Bingo", "Bingo cards with words, numbers, images or questions"],
+      "pairs": ["Pairs Game", "Pairs games to print and cut out, with images, words or questions"],
+      "domino": ["Educational Domino", "Domino tiles to chain together, with images, words or questions"],
+      "wordsearch": ["Word Search", "Word searches with the words you choose"],
+      "crossword": ["Crossword", "Crosswords with the words and clues you define"],
+      "matching": ["Matching", "Match each item in one column with its partner in the other"],
+      "flashcards": ["Flashcards", "Cards to memorize words with their definition or translation"],
+      "secretcode": ["Secret Code", "Coded messages using symbols, numbers or math operations to decode"],
+      "answerpath": ["Answer Path", "Multiple-choice step paths to solve in order"],
+      "math": ["Math Worksheet", "Practice sheets with addition, subtraction, multiplication and division"],
+      "colorsolve": ["Color By Solving", "Templates to color in by solving math exercises"],
+      "sudoku": ["Sudoku", "4×4 or 9×9 sudoku boards with three difficulty levels"]
+    }
+  },
+  "gallery": {
+    "title": "Real worksheets made with Wibblo",
+    "intro": "This is how they come out: ready to print. Tap one to see it larger.",
+    "note": "",
+    "close": "Close"
+  },
+  "how": {
+    "title": "How it works",
+    "steps": [
+      ["Pick an activity", "Bingo, word search, crossword, math and more."],
+      ["Type your words or use ready-made content", "Add your own words, questions or numbers, or pick a ready-made topic."],
+      ["Export to PDF and print", "Check the preview, export the worksheet and share it or print it."]
+    ]
+  },
+  "tutorials": {
+    "title": "Tutorials",
+    "intro": "Step by step, with screenshots of the app.",
+    "step": "Step",
+    "video": "Video",
+    "show_steps": "See the steps with screenshots",
+    "items": {
+      "bingo": {
+        "title": "How to make a bingo",
+        "steps": [
+          "Choose what fills the cards (words, numbers, images or questions), their size and how many you want.",
+          "Add the content: type your words or pick images from the image bank. You can also use your own photos.",
+          "Give it a title and, if you like, a background color or image.",
+          "Tap Generate, check the preview and export the cards to PDF."
+        ]
+      },
+      "wordsearch": {
+        "title": "How to make a word search",
+        "steps": [
+          "Type the words to find or tap “Use ready-made content”. You can group them under a question or category.",
+          "Choose the grid size and whether words can go diagonally or backwards.",
+          "Give it a title and a color, and decide whether to include the answer key.",
+          "Tap Generate, check the preview and export to PDF."
+        ]
+      },
+      "crossword": {
+        "title": "How to make a crossword",
+        "steps": [
+          "Type each word with its clue, or tap “Use ready-made content”.",
+          "Give it a title and a color, and decide whether to include the answer key.",
+          "Tap Generate: Wibblo crosses the words for you. Check the preview and export to PDF."
+        ]
+      },
+      "math": {
+        "title": "How to make a math worksheet",
+        "steps": [
+          "Choose the operations, the number range and the rules, for example no negative results.",
+          "Choose the layout (inline or vertical), the number of exercises and of different versions.",
+          "Tap Generate, check the preview and its answer key, and export to PDF."
+        ]
+      },
+      "secretcode": {
+        "title": "How to make a secret code",
+        "steps": [
+          "Choose the type of code: symbols, numbers or math operations.",
+          "Type the phrases to encode or tap “Use ready-made content” (sayings, for example).",
+          "Give it a title and choose how many different codes you want.",
+          "Tap Generate, check the preview and export to PDF."
+        ]
+      }
+    }
+  },
+  "plans": {
+    "title": "Free and Pro",
+    "intro": "Wibblo is free to download. Pro unlocks everything. The price of Pro depends on your country and your store, and you see it in the app before you subscribe.",
+    "free": {
+      "title": "Free",
+      "items": [
+        "All 12 activities",
+        "5 worksheets a week, with a watermark",
+        "Some backgrounds, image banks and ready-made topics",
+        "Your last 10 worksheets saved in “My worksheets”"
+      ]
+    },
+    "pro": {
+      "title": "Wibblo Pro",
+      "items": [
+        "Unlimited worksheets",
+        "PDFs without a watermark, with the option to hide the QR footer",
+        "All backgrounds and app color themes",
+        "All image banks and all ready-made content",
+        "All your worksheets saved in “My worksheets”"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      ["How do I print double-sided?", "Some worksheets have a back side: bingo cards with a decorative back, double-sided flashcards and pairs or domino cards with backs. Turn on double-sided printing on your printer. For portrait pages, flip on the long edge; for landscape pages (bingo with 2 cards per page), flip on the short edge. If your printer can't print double-sided, print the odd pages first, put the paper back in and then print the even pages."],
+      ["What is the QR code at the bottom of the worksheets?", "It leads to this page, so anyone who gets a worksheet knows how it was made and can download Wibblo. With Wibblo Pro you can hide the footer in Settings."],
+      ["How do I cancel my subscription?", "On iPhone or iPad: Settings → your name → Subscriptions → Wibblo Pro. On Android: Google Play → your profile → Payments & subscriptions → Subscriptions. You can also get there from the app, on the Wibblo Pro screen → “Manage subscription”. Pro stays active until the end of the period you already paid for."],
+      ["How do I restore my purchases?", "Open the Wibblo Pro screen and tap “Restore purchases”, using the same Apple or Google account you bought with. The app also checks automatically every time you open it."],
+      ["Which languages is Wibblo in?", "Spanish, English, French and Portuguese. The first time it uses your phone's language, and you can change it anytime in Settings. Ready-made content is available in each language too."],
+      ["Do I need an account or internet?", "No. Wibblo doesn't ask for an account and works offline, except to buy or restore Pro. Your worksheets are saved only on your phone."]
+    ]
+  },
+  "cta": {
+    "title": "Make your first worksheet today",
+    "text": "Download Wibblo for free and try all 12 activities."
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "contact": "Contact",
+    "kaeli": "An app by Kaeli"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "title": "Wibblo: fichas y actividades imprimibles",
+    "description": "Crea bingos, sopas de letras, crucigramas y 9 actividades más con tus propias palabras o con contenido listo, y expórtalas a PDF para imprimir en casa.",
+    "language": "Español"
+  },
+  "nav": {
+    "generators": "Actividades",
+    "examples": "Ejemplos",
+    "tutorials": "Tutoriales",
+    "plans": "Gratis y Pro",
+    "faq": "Preguntas",
+    "download": "Descargar",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Convierte tus ideas en actividades imprimibles.",
+    "text": "Bingo, sopa de letras, crucigramas y 9 actividades más. Escribe tus palabras o usa contenido listo, y exporta a PDF para imprimir en casa, en una fiesta o donde quieras.",
+    "mascot_alt": "Wibblo, la mascota de la app, saludando",
+    "your_store": "Tu tienda"
+  },
+  "badges": {
+    "app_store_alt": "Descárgalo en el App Store",
+    "google_play_alt": "Disponible en Google Play"
+  },
+  "generators": {
+    "title": "12 actividades en una sola app",
+    "intro": "Elige una, escribe tu contenido y Wibblo arma la ficha por ti.",
+    "categories": {
+      "games": "Juegos",
+      "activities": "Actividades",
+      "math": "Matemáticas"
+    },
+    "items": {
+      "bingo": ["Bingo", "Cartones de bingo con palabras, números, imágenes o preguntas"],
+      "pairs": ["Parejas", "Juegos de parejas para imprimir y recortar, con imágenes, palabras o preguntas"],
+      "domino": ["Dominó educativo", "Fichas de dominó para armar en cadena, con imágenes, palabras o preguntas"],
+      "wordsearch": ["Sopa de letras", "Sopas de letras con las palabras que tú elijas"],
+      "crossword": ["Crucigrama", "Crucigramas con las palabras y pistas que tú definas"],
+      "matching": ["Relaciona columnas", "Une cada elemento de una columna con su pareja de la otra"],
+      "flashcards": ["Tarjetas de vocabulario", "Tarjetas para memorizar palabras con su definición o traducción"],
+      "secretcode": ["Código secreto", "Mensajes codificados con símbolos, números u operaciones matemáticas para descifrar"],
+      "answerpath": ["Camino de respuestas", "Caminos de pasos con opción múltiple para resolver en orden"],
+      "math": ["Generador de matemáticas", "Hojas de práctica con sumas, restas, multiplicaciones y divisiones"],
+      "colorsolve": ["Colorea resolviendo", "Plantillas para colorear resolviendo ejercicios matemáticos"],
+      "sudoku": ["Sudoku", "Tableros de sudoku en 4×4 o 9×9 con tres niveles de dificultad"]
+    }
+  },
+  "gallery": {
+    "title": "Fichas reales hechas con Wibblo",
+    "intro": "Así salen las fichas: listas para imprimir. Toca una para verla en grande.",
+    "note": "",
+    "close": "Cerrar"
+  },
+  "how": {
+    "title": "Cómo funciona",
+    "steps": [
+      ["Elige la actividad", "Bingo, sopa de letras, crucigrama, matemáticas y más."],
+      ["Escribe tus palabras o usa contenido listo", "Pon tus propias palabras, preguntas o números, o elige un tema ya preparado."],
+      ["Exporta a PDF e imprime", "Revisa la vista previa, exporta la ficha y compártela o imprímela."]
+    ]
+  },
+  "tutorials": {
+    "title": "Tutoriales",
+    "intro": "Paso a paso, con capturas de la app.",
+    "step": "Paso",
+    "video": "Video",
+    "show_steps": "Ver los pasos con capturas",
+    "items": {
+      "bingo": {
+        "title": "Cómo hacer un bingo",
+        "steps": [
+          "Elige con qué se llenan los cartones (palabras, números, imágenes o preguntas), su tamaño y cuántos quieres.",
+          "Agrega el contenido: escribe tus palabras o elige imágenes del banco. También puedes usar tus propias fotos.",
+          "Ponle título y, si quieres, un color o una imagen de fondo.",
+          "Toca Generar, revisa la vista previa y exporta los cartones a PDF."
+        ]
+      },
+      "wordsearch": {
+        "title": "Cómo hacer una sopa de letras",
+        "steps": [
+          "Escribe las palabras a buscar o toca «Usar contenido listo». Puedes agruparlas con una pregunta o categoría.",
+          "Elige el tamaño de la cuadrícula y si se permiten palabras en diagonal o al revés.",
+          "Ponle título y color, y decide si incluir la hoja de respuestas.",
+          "Toca Generar, revisa la vista previa y exporta a PDF."
+        ]
+      },
+      "crossword": {
+        "title": "Cómo hacer un crucigrama",
+        "steps": [
+          "Escribe cada palabra con su pista, o toca «Usar contenido listo».",
+          "Ponle título y color, y decide si incluir la hoja de respuestas.",
+          "Toca Generar: Wibblo cruza las palabras solo. Revisa la vista previa y exporta a PDF."
+        ]
+      },
+      "math": {
+        "title": "Cómo hacer una hoja de matemáticas",
+        "steps": [
+          "Elige las operaciones, el rango de números y las reglas, por ejemplo, sin resultados negativos.",
+          "Elige el formato (en línea o vertical), la cantidad de ejercicios y de versiones distintas.",
+          "Toca Generar, revisa la vista previa con su hoja de respuestas y exporta a PDF."
+        ]
+      },
+      "secretcode": {
+        "title": "Cómo hacer un código secreto",
+        "steps": [
+          "Elige el tipo de código: símbolos, números u operaciones matemáticas.",
+          "Escribe las frases a codificar o toca «Usar contenido listo» (por ejemplo, refranes).",
+          "Ponle título y elige cuántos códigos distintos quieres.",
+          "Toca Generar, revisa la vista previa y exporta a PDF."
+        ]
+      }
+    }
+  },
+  "plans": {
+    "title": "Gratis y Pro",
+    "intro": "Wibblo se descarga gratis. Con Pro desbloqueas todo. El precio de Pro depende de tu país y de tu tienda, y lo ves dentro de la app antes de suscribirte.",
+    "free": {
+      "title": "Gratis",
+      "items": [
+        "Las 12 actividades",
+        "5 fichas por semana, con marca de agua",
+        "Algunos fondos, bancos de imágenes y temas de contenido listo",
+        "Tus últimas 10 fichas guardadas en «Mis fichas»"
+      ]
+    },
+    "pro": {
+      "title": "Wibblo Pro",
+      "items": [
+        "Fichas ilimitadas",
+        "PDF sin marca de agua y con la opción de ocultar el pie con el QR",
+        "Todos los fondos y los temas de color de la app",
+        "Todos los bancos de imágenes y todo el contenido listo",
+        "Todas tus fichas guardadas en «Mis fichas»"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      ["¿Cómo imprimo a doble cara?", "Algunas fichas llevan reverso: los cartones de bingo con reverso decorativo, las tarjetas de vocabulario a doble cara y las cartas de parejas o dominó con reverso. Activa la impresión a doble cara en tu impresora. En las hojas verticales, voltea por el borde largo; en las apaisadas (bingo con 2 cartones por hoja), por el borde corto. Si tu impresora no imprime a doble cara, imprime primero las hojas impares, vuelve a poner el papel y luego imprime las pares."],
+      ["¿Para qué es el código QR al pie de las fichas?", "Lleva a esta página, para que quien reciba una ficha sepa con qué se hizo y pueda descargar Wibblo. Con Wibblo Pro puedes ocultar el pie desde Ajustes."],
+      ["¿Cómo cancelo la suscripción?", "En iPhone o iPad: Ajustes → tu nombre → Suscripciones → Wibblo Pro. En Android: Google Play → tu perfil → Pagos y suscripciones → Suscripciones. También puedes llegar desde la app, en la pantalla de Wibblo Pro → «Administrar suscripción». Pro sigue activo hasta el final del período que ya pagaste."],
+      ["¿Cómo restauro mis compras?", "Abre la pantalla de Wibblo Pro y toca «Restaurar compras», con la misma cuenta de Apple o de Google con la que compraste. La app también lo revisa sola cada vez que la abres."],
+      ["¿En qué idiomas está Wibblo?", "En español, inglés, francés y portugués. La primera vez usa el idioma de tu teléfono y lo puedes cambiar cuando quieras en Ajustes. El contenido listo también está en cada idioma."],
+      ["¿Necesito una cuenta o internet?", "No. Wibblo no pide cuenta y funciona sin internet, salvo para comprar o restaurar Pro. Tus fichas se guardan solo en tu teléfono."]
+    ]
+  },
+  "cta": {
+    "title": "Crea tu primera ficha hoy",
+    "text": "Descarga Wibblo gratis y prueba las 12 actividades."
+  },
+  "footer": {
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "contact": "Contacto",
+    "kaeli": "Una app de Kaeli"
+  }
+}

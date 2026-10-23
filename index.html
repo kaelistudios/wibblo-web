@@ -3,108 +3,335 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wibblo</title>
-<meta name="description" content="Fichas imprimibles: bingo, sopa de letras, crucigramas y más. / Printable activities: bingo, word search, crosswords and more.">
+<title>Wibblo: fichas y actividades imprimibles</title>
+<meta name="description" content="Crea bingos, sopas de letras, crucigramas y 9 actividades más con tus propias palabras o con contenido listo, y expórtalas a PDF para imprimir en casa.">
+<link rel="canonical" href="https://wibblo.kaeliapps.com/">
+<link rel="alternate" hreflang="es" href="https://wibblo.kaeliapps.com/">
+<link rel="alternate" hreflang="en" href="https://wibblo.kaeliapps.com/en/">
+<link rel="alternate" hreflang="fr" href="https://wibblo.kaeliapps.com/fr/">
+<link rel="alternate" hreflang="pt" href="https://wibblo.kaeliapps.com/pt/">
+<link rel="alternate" hreflang="x-default" href="https://wibblo.kaeliapps.com/">
 <link rel="icon" href="icon.png">
-<!-- Imagen al compartir el enlace (1200x630, la de Kaeli, publicada en kaeliapps.com). -->
+<meta name="theme-color" content="#2563EB">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Kaeli">
-<meta property="og:title" content="Wibblo">
-<meta property="og:description" content="Fichas imprimibles: bingo, sopa de letras, crucigramas y más. / Printable activities: bingo, word search, crosswords and more.">
+<meta property="og:site_name" content="Wibblo">
+<meta property="og:title" content="Wibblo: fichas y actividades imprimibles">
+<meta property="og:description" content="Crea bingos, sopas de letras, crucigramas y 9 actividades más con tus propias palabras o con contenido listo, y expórtalas a PDF para imprimir en casa.">
 <meta property="og:url" content="https://wibblo.kaeliapps.com/">
 <meta property="og:image" content="https://kaeliapps.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Kaeli">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wibblo">
-<meta name="twitter:image" content="https://kaeliapps.com/og-image.png">
-<!--
-  Página del QR de los PDF de Wibblo.
-  - Android: redirige a Google Play.
-  - iPhone/iPad: redirige al App Store (Apple ID 6819557562).
-  - Computadora o sin JavaScript: muestra los dos botones.
-  Si la app deja de estar en el App Store, vaciar appStore en el script y
-  volver a ocultar los botones .appstore: en iPhone se muestra entonces
-  "Muy pronto en iPhone y iPad" con el botón de Google Play.
--->
+<link rel="preload" href="fonts/Fredoka-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilos.css">
 <script>
+  // Teléfono: resaltar la tienda que corresponde. Raíz en español: llevar a su idioma
+  // a quien tiene el teléfono en inglés, francés o portugués (salvo que haya elegido idioma).
   (function () {
-    var html = document.documentElement;
-    var langs = navigator.languages || [navigator.language || ''];
-    for (var i = 0; i < langs.length; i++) {
-      var l = String(langs[i]).toLowerCase();
-      if (l.indexOf('es') === 0) break;
-      if (l.indexOf('en') === 0) { html.className += ' lang-en'; html.lang = 'en'; break; }
-    }
-    var ua = navigator.userAgent || '';
-    var android = /Android/i.test(ua);
-    var ios = /iPhone|iPad|iPod/i.test(ua) ||
-      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    var play = 'https://play.google.com/store/apps/details?id=com.kaeli.wibblo';
-    var appStore = 'https://apps.apple.com/app/id6819557562';
-    if (android) { location.replace(play); return; }
-    if (ios) {
-      html.className += ' ios';
-      if (appStore) { location.replace(appStore); return; }
-      html.className += ' ios-soon';
+    var h = document.documentElement, ua = navigator.userAgent || '';
+    if (/Android/i.test(ua)) h.className += ' android';
+    else if (/iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) h.className += ' ios';
+    var chosen = null;
+    try { chosen = localStorage.getItem('wibblo.lang'); } catch (e) {}
+    if (!chosen && !location.hash) {
+      var langs = navigator.languages || [navigator.language || ''];
+      for (var i = 0; i < langs.length; i++) {
+        var l = String(langs[i]).slice(0, 2).toLowerCase();
+        if (l === 'es') break;
+        if (l === 'en' || l === 'fr' || l === 'pt') { location.replace(l + '/'); return; }
+      }
     }
   })();
 </script>
-<style>
-  :root { --text:#1f1f24; --muted:#5f6368; --accent:#2f6fd6; --bg:#ffffff; --card:#f6f8fb; --border:#e3e6eb; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height:1.5; }
-  main { max-width:480px; margin:0 auto; padding:48px 16px 32px; text-align:center; }
-  .icon { width:112px; height:112px; border-radius:26px; }
-  h1 { font-size:2rem; margin:12px 0 4px; }
-  .tagline { color:var(--muted); margin:0 0 28px; }
-  .soon { display:none; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:12px 16px; margin:0 0 20px; font-weight:600; }
-  .ios-soon .soon { display:block; }
-  /* Insignias oficiales de Apple y Google, a la misma altura (guías de marca de cada tienda). */
-  .stores { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px; }
-  .store { display:inline-block; line-height:0; }
-  .store img { height:56px; width:auto; }
-  .store[hidden] { display:none; }
-  .links { margin-top:32px; font-size:.9rem; }
-  .links a { color:var(--accent); font-weight:600; text-decoration:none; margin:0 8px; }
-  footer { text-align:center; color:var(--muted); font-size:.85rem; padding:0 16px 32px; }
-  footer a { color:inherit; }
-  #en { display:none; }
-  .lang-en #es { display:none; }
-  .lang-en #en { display:block; }
-  #en:target { display:block; }
-  main:has(#en:target) #es { display:none; }
-  #es:target { display:block; }
-  main:has(#es:target) #en { display:none; }
-</style>
+<script src="sitio.js" defer></script>
 </head>
 <body>
-<main>
-  <img class="icon" src="icon.png" width="192" height="192" alt="">
+<a class="skip" href="#main">Wibblo</a>
+<header class="top">
+  <a class="brand" href="./"><img src="icon.png" width="40" height="40" alt=""><span>Wibblo</span></a>
+  <nav class="menu" aria-label="Wibblo">
+    <a href="#activities">Actividades</a>
+    <a href="#examples">Ejemplos</a>
+    <a href="#tutorials">Tutoriales</a>
+    <a href="#plans">Gratis y Pro</a>
+    <a href="#faq">Preguntas</a>
+  </nav>
+  <details class="langs">
+    <summary aria-label="Idioma">ES</summary>
+    <div><a href="./" data-lang="es" lang="es" aria-current="page">Español</a><a href="./en/" data-lang="en" lang="en">English</a><a href="./fr/" data-lang="fr" lang="fr">Français</a><a href="./pt/" data-lang="pt" lang="pt">Português</a></div>
+  </details>
+  <a class="get" href="#download">Descargar</a>
+</header>
 
-  <section id="es" lang="es">
-    <h1>Wibblo</h1>
-    <p class="tagline">Fichas imprimibles: bingo, sopa de letras, crucigramas y más.</p>
-    <p class="soon">Muy pronto en iPhone y iPad</p>
-    <div class="stores">
-      <a class="store appstore" href="https://apps.apple.com/app/id6819557562"><img src="badges/app-store-es.svg" width="168" height="56" alt="Descárgalo en el App Store"></a>
-      <a class="store" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><img src="badges/google-play-es.png" width="188" height="56" alt="Descargar en Google Play"></a>
+<main id="main">
+  <section class="hero" id="download">
+    <div class="hero-text">
+      <h1>Convierte tus ideas en actividades imprimibles.</h1>
+      <p class="lead">Bingo, sopa de letras, crucigramas y 9 actividades más. Escribe tus palabras o usa contenido listo, y exporta a PDF para imprimir en casa, en una fiesta o donde quieras.</p>
+      <div class="stores">
+        <a class="store appstore" href="https://apps.apple.com/app/id6819557562"><span class="yours">Tu tienda</span><img src="badges/app-store-es.svg" width="168" height="56" alt="Descárgalo en el App Store"></a>
+        <a class="store play" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><span class="yours">Tu tienda</span><img src="badges/google-play-es.png" width="188" height="56" alt="Disponible en Google Play"></a>
+      </div>
     </div>
-    <p class="links"><a href="privacidad/">Política de privacidad</a><a href="#en">English</a></p>
+    <div class="hero-art" aria-hidden="false">
+      <div class="blob"></div>
+      <img class="mascot" src="img/mascota/cheer.webp" width="420" height="420" alt="Wibblo, la mascota de la app, saludando">
+      <img class="float f1" src="img/generadores/bingo.webp" width="72" height="72" alt="">
+      <img class="float f2" src="img/generadores/wordsearch.webp" width="64" height="64" alt="">
+      <img class="float f3" src="img/generadores/crossword.webp" width="60" height="60" alt="">
+      <img class="float f4" src="img/generadores/math.webp" width="68" height="68" alt="">
+    </div>
   </section>
 
-  <section id="en" lang="en">
-    <h1>Wibblo</h1>
-    <p class="tagline">Printable activities: bingo, word search, crosswords and more.</p>
-    <p class="soon">Coming soon to iPhone and iPad</p>
-    <div class="stores">
-      <a class="store appstore" href="https://apps.apple.com/app/id6819557562"><img src="badges/app-store-en.svg" width="168" height="56" alt="Download on the App Store"></a>
-      <a class="store" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><img src="badges/google-play-en.png" width="188" height="56" alt="Get it on Google Play"></a>
+  <section class="band" id="activities">
+    <h2>12 actividades en una sola app</h2>
+    <p class="intro">Elige una, escribe tu contenido y Wibblo arma la ficha por ti.</p>
+    <div class="cats"><div class="cat cat-games">
+        <h3>Juegos</h3>
+        <ul class="gens"><li class="gen">
+            <img src="img/generadores/bingo.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Bingo</h4>
+            <p>Cartones de bingo con palabras, números, imágenes o preguntas</p>
+          </li><li class="gen">
+            <img src="img/generadores/pairs.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Parejas</h4>
+            <p>Juegos de parejas para imprimir y recortar, con imágenes, palabras o preguntas</p>
+          </li><li class="gen">
+            <img src="img/generadores/domino.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Dominó educativo</h4>
+            <p>Fichas de dominó para armar en cadena, con imágenes, palabras o preguntas</p>
+          </li></ul>
+      </div><div class="cat cat-activities">
+        <h3>Actividades</h3>
+        <ul class="gens"><li class="gen">
+            <img src="img/generadores/wordsearch.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Sopa de letras</h4>
+            <p>Sopas de letras con las palabras que tú elijas</p>
+          </li><li class="gen">
+            <img src="img/generadores/crossword.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Crucigrama</h4>
+            <p>Crucigramas con las palabras y pistas que tú definas</p>
+          </li><li class="gen">
+            <img src="img/generadores/matching.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Relaciona columnas</h4>
+            <p>Une cada elemento de una columna con su pareja de la otra</p>
+          </li><li class="gen">
+            <img src="img/generadores/flashcards.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Tarjetas de vocabulario</h4>
+            <p>Tarjetas para memorizar palabras con su definición o traducción</p>
+          </li><li class="gen">
+            <img src="img/generadores/secretcode.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Código secreto</h4>
+            <p>Mensajes codificados con símbolos, números u operaciones matemáticas para descifrar</p>
+          </li><li class="gen">
+            <img src="img/generadores/answerpath.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Camino de respuestas</h4>
+            <p>Caminos de pasos con opción múltiple para resolver en orden</p>
+          </li></ul>
+      </div><div class="cat cat-math">
+        <h3>Matemáticas</h3>
+        <ul class="gens"><li class="gen">
+            <img src="img/generadores/math.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Generador de matemáticas</h4>
+            <p>Hojas de práctica con sumas, restas, multiplicaciones y divisiones</p>
+          </li><li class="gen">
+            <img src="img/generadores/colorsolve.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Colorea resolviendo</h4>
+            <p>Plantillas para colorear resolviendo ejercicios matemáticos</p>
+          </li><li class="gen">
+            <img src="img/generadores/sudoku.webp" width="72" height="72" alt="" loading="lazy">
+            <h4>Sudoku</h4>
+            <p>Tableros de sudoku en 4×4 o 9×9 con tres niveles de dificultad</p>
+          </li></ul>
+      </div></div>
+  </section>
+
+  <section class="band alt" id="examples">
+    <h2>Fichas reales hechas con Wibblo</h2>
+    <p class="intro">Así salen las fichas: listas para imprimir. Toca una para verla en grande.</p>
+    
+    <ul class="gallery"><li><a class="sample" href="img/ejemplos/es/bingo.webp" data-title="Bingo">
+          <img src="img/ejemplos/es/bingo-mini.webp" alt="Bingo" loading="lazy">
+          <span>Bingo</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/pairs.webp" data-title="Parejas">
+          <img src="img/ejemplos/es/pairs-mini.webp" alt="Parejas" loading="lazy">
+          <span>Parejas</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/wordsearch.webp" data-title="Sopa de letras">
+          <img src="img/ejemplos/es/wordsearch-mini.webp" alt="Sopa de letras" loading="lazy">
+          <span>Sopa de letras</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/crossword.webp" data-title="Crucigrama">
+          <img src="img/ejemplos/es/crossword-mini.webp" alt="Crucigrama" loading="lazy">
+          <span>Crucigrama</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/secretcode.webp" data-title="Código secreto">
+          <img src="img/ejemplos/es/secretcode-mini.webp" alt="Código secreto" loading="lazy">
+          <span>Código secreto</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/math.webp" data-title="Generador de matemáticas">
+          <img src="img/ejemplos/es/math-mini.webp" alt="Generador de matemáticas" loading="lazy">
+          <span>Generador de matemáticas</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/domino.webp" data-title="Dominó educativo">
+          <img src="img/ejemplos/es/domino-mini.webp" alt="Dominó educativo" loading="lazy">
+          <span>Dominó educativo</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/matching.webp" data-title="Relaciona columnas">
+          <img src="img/ejemplos/es/matching-mini.webp" alt="Relaciona columnas" loading="lazy">
+          <span>Relaciona columnas</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/flashcards.webp" data-title="Tarjetas de vocabulario">
+          <img src="img/ejemplos/es/flashcards-mini.webp" alt="Tarjetas de vocabulario" loading="lazy">
+          <span>Tarjetas de vocabulario</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/answerpath.webp" data-title="Camino de respuestas">
+          <img src="img/ejemplos/es/answerpath-mini.webp" alt="Camino de respuestas" loading="lazy">
+          <span>Camino de respuestas</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/colorsolve.webp" data-title="Colorea resolviendo">
+          <img src="img/ejemplos/es/colorsolve-mini.webp" alt="Colorea resolviendo" loading="lazy">
+          <span>Colorea resolviendo</span>
+        </a></li><li><a class="sample" href="img/ejemplos/es/sudoku.webp" data-title="Sudoku">
+          <img src="img/ejemplos/es/sudoku-mini.webp" alt="Sudoku" loading="lazy">
+          <span>Sudoku</span>
+        </a></li></ul>
+  </section>
+
+  <section class="band" id="how">
+    <h2>Cómo funciona</h2>
+    <ol class="how"><li><span class="num">1</span><h3>Elige la actividad</h3><p>Bingo, sopa de letras, crucigrama, matemáticas y más.</p></li><li><span class="num">2</span><h3>Escribe tus palabras o usa contenido listo</h3><p>Pon tus propias palabras, preguntas o números, o elige un tema ya preparado.</p></li><li><span class="num">3</span><h3>Exporta a PDF e imprime</h3><p>Revisa la vista previa, exporta la ficha y compártela o imprímela.</p></li></ol>
+  </section>
+
+  <section class="band alt" id="tutorials">
+    <h2>Tutoriales</h2>
+    <p class="intro">Paso a paso, con capturas de la app.</p>
+    <div class="tabs" role="tablist"><button role="tab" id="tab-bingo" aria-controls="tut-bingo" aria-selected="true" data-tab="bingo"><img src="img/generadores/bingo.webp" width="32" height="32" alt=""><span>Bingo</span></button><button role="tab" id="tab-wordsearch" aria-controls="tut-wordsearch" aria-selected="false" data-tab="wordsearch"><img src="img/generadores/wordsearch.webp" width="32" height="32" alt=""><span>Sopa de letras</span></button><button role="tab" id="tab-crossword" aria-controls="tut-crossword" aria-selected="false" data-tab="crossword"><img src="img/generadores/crossword.webp" width="32" height="32" alt=""><span>Crucigrama</span></button><button role="tab" id="tab-math" aria-controls="tut-math" aria-selected="false" data-tab="math"><img src="img/generadores/math.webp" width="32" height="32" alt=""><span>Generador de matemáticas</span></button><button role="tab" id="tab-secretcode" aria-controls="tut-secretcode" aria-selected="false" data-tab="secretcode"><img src="img/generadores/secretcode.webp" width="32" height="32" alt=""><span>Código secreto</span></button></div>
+    <section class="tut" role="tabpanel" id="tut-bingo" aria-labelledby="tab-bingo" data-tutorial="bingo">
+          <h3>Cómo hacer un bingo</h3>
+          <div class="video-slot" hidden></div>
+          <details class="guide" open>
+            <summary>Ver los pasos con capturas</summary>
+            <ol class="steps"><li class="step">
+              <img src="tutoriales/capturas/es/bingo-1.webp" width="360" height="783" alt="Paso 1" loading="lazy">
+              <p><b>Paso 1.</b> Elige con qué se llenan los cartones (palabras, números, imágenes o preguntas), su tamaño y cuántos quieres.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/bingo-2.webp" width="360" height="783" alt="Paso 2" loading="lazy">
+              <p><b>Paso 2.</b> Agrega el contenido: escribe tus palabras o elige imágenes del banco. También puedes usar tus propias fotos.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/bingo-3.webp" width="360" height="783" alt="Paso 3" loading="lazy">
+              <p><b>Paso 3.</b> Ponle título y, si quieres, un color o una imagen de fondo.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/bingo-4.webp" width="360" height="783" alt="Paso 4" loading="lazy">
+              <p><b>Paso 4.</b> Toca Generar, revisa la vista previa y exporta los cartones a PDF.</p>
+            </li></ol>
+          </details>
+        </section><section class="tut" role="tabpanel" id="tut-wordsearch" aria-labelledby="tab-wordsearch" data-tutorial="wordsearch">
+          <h3>Cómo hacer una sopa de letras</h3>
+          <div class="video-slot" hidden></div>
+          <details class="guide" open>
+            <summary>Ver los pasos con capturas</summary>
+            <ol class="steps"><li class="step">
+              <img src="tutoriales/capturas/es/sopa-1.webp" width="360" height="783" alt="Paso 1" loading="lazy">
+              <p><b>Paso 1.</b> Escribe las palabras a buscar o toca «Usar contenido listo». Puedes agruparlas con una pregunta o categoría.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/sopa-2.webp" width="360" height="783" alt="Paso 2" loading="lazy">
+              <p><b>Paso 2.</b> Elige el tamaño de la cuadrícula y si se permiten palabras en diagonal o al revés.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/sopa-3.webp" width="360" height="783" alt="Paso 3" loading="lazy">
+              <p><b>Paso 3.</b> Ponle título y color, y decide si incluir la hoja de respuestas.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/sopa-4.webp" width="360" height="783" alt="Paso 4" loading="lazy">
+              <p><b>Paso 4.</b> Toca Generar, revisa la vista previa y exporta a PDF.</p>
+            </li></ol>
+          </details>
+        </section><section class="tut" role="tabpanel" id="tut-crossword" aria-labelledby="tab-crossword" data-tutorial="crossword">
+          <h3>Cómo hacer un crucigrama</h3>
+          <div class="video-slot" hidden></div>
+          <details class="guide" open>
+            <summary>Ver los pasos con capturas</summary>
+            <ol class="steps"><li class="step">
+              <img src="tutoriales/capturas/es/crucigrama-1.webp" width="360" height="783" alt="Paso 1" loading="lazy">
+              <p><b>Paso 1.</b> Escribe cada palabra con su pista, o toca «Usar contenido listo».</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/crucigrama-2.webp" width="360" height="783" alt="Paso 2" loading="lazy">
+              <p><b>Paso 2.</b> Ponle título y color, y decide si incluir la hoja de respuestas.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/crucigrama-3.webp" width="360" height="783" alt="Paso 3" loading="lazy">
+              <p><b>Paso 3.</b> Toca Generar: Wibblo cruza las palabras solo. Revisa la vista previa y exporta a PDF.</p>
+            </li></ol>
+          </details>
+        </section><section class="tut" role="tabpanel" id="tut-math" aria-labelledby="tab-math" data-tutorial="math">
+          <h3>Cómo hacer una hoja de matemáticas</h3>
+          <div class="video-slot" hidden></div>
+          <details class="guide" open>
+            <summary>Ver los pasos con capturas</summary>
+            <ol class="steps"><li class="step">
+              <img src="tutoriales/capturas/es/matematicas-1.webp" width="360" height="783" alt="Paso 1" loading="lazy">
+              <p><b>Paso 1.</b> Elige las operaciones, el rango de números y las reglas, por ejemplo, sin resultados negativos.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/matematicas-2.webp" width="360" height="783" alt="Paso 2" loading="lazy">
+              <p><b>Paso 2.</b> Elige el formato (en línea o vertical), la cantidad de ejercicios y de versiones distintas.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/matematicas-3.webp" width="360" height="783" alt="Paso 3" loading="lazy">
+              <p><b>Paso 3.</b> Toca Generar, revisa la vista previa con su hoja de respuestas y exporta a PDF.</p>
+            </li></ol>
+          </details>
+        </section><section class="tut" role="tabpanel" id="tut-secretcode" aria-labelledby="tab-secretcode" data-tutorial="secretcode">
+          <h3>Cómo hacer un código secreto</h3>
+          <div class="video-slot" hidden></div>
+          <details class="guide" open>
+            <summary>Ver los pasos con capturas</summary>
+            <ol class="steps"><li class="step">
+              <img src="tutoriales/capturas/es/codigo-1.webp" width="360" height="783" alt="Paso 1" loading="lazy">
+              <p><b>Paso 1.</b> Elige el tipo de código: símbolos, números u operaciones matemáticas.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/codigo-2.webp" width="360" height="783" alt="Paso 2" loading="lazy">
+              <p><b>Paso 2.</b> Escribe las frases a codificar o toca «Usar contenido listo» (por ejemplo, refranes).</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/codigo-3.webp" width="360" height="783" alt="Paso 3" loading="lazy">
+              <p><b>Paso 3.</b> Ponle título y elige cuántos códigos distintos quieres.</p>
+            </li><li class="step">
+              <img src="tutoriales/capturas/es/codigo-4.webp" width="360" height="783" alt="Paso 4" loading="lazy">
+              <p><b>Paso 4.</b> Toca Generar, revisa la vista previa y exporta a PDF.</p>
+            </li></ol>
+          </details>
+        </section>
+  </section>
+
+  <section class="band" id="plans">
+    <h2>Gratis y Pro</h2>
+    <p class="intro">Wibblo se descarga gratis. Con Pro desbloqueas todo. El precio de Pro depende de tu país y de tu tienda, y lo ves dentro de la app antes de suscribirte.</p>
+    <div class="plans">
+      <div class="plan"><h3>Gratis</h3><ul><li>Las 12 actividades</li><li>5 fichas por semana, con marca de agua</li><li>Algunos fondos, bancos de imágenes y temas de contenido listo</li><li>Tus últimas 10 fichas guardadas en «Mis fichas»</li></ul></div>
+      <div class="plan pro"><h3><img src="img/pro/crown.webp" width="32" height="32" alt="">Wibblo Pro</h3><ul><li>Fichas ilimitadas</li><li>PDF sin marca de agua y con la opción de ocultar el pie con el QR</li><li>Todos los fondos y los temas de color de la app</li><li>Todos los bancos de imágenes y todo el contenido listo</li><li>Todas tus fichas guardadas en «Mis fichas»</li></ul></div>
     </div>
-    <p class="links"><a href="privacidad/#en">Privacy Policy</a><a href="#es">Español</a></p>
+  </section>
+
+  <section class="band alt" id="faq">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><details><summary>¿Cómo imprimo a doble cara?</summary><p>Algunas fichas llevan reverso: los cartones de bingo con reverso decorativo, las tarjetas de vocabulario a doble cara y las cartas de parejas o dominó con reverso. Activa la impresión a doble cara en tu impresora. En las hojas verticales, voltea por el borde largo; en las apaisadas (bingo con 2 cartones por hoja), por el borde corto. Si tu impresora no imprime a doble cara, imprime primero las hojas impares, vuelve a poner el papel y luego imprime las pares.</p></details><details><summary>¿Para qué es el código QR al pie de las fichas?</summary><p>Lleva a esta página, para que quien reciba una ficha sepa con qué se hizo y pueda descargar Wibblo. Con Wibblo Pro puedes ocultar el pie desde Ajustes.</p></details><details><summary>¿Cómo cancelo la suscripción?</summary><p>En iPhone o iPad: Ajustes → tu nombre → Suscripciones → Wibblo Pro. En Android: Google Play → tu perfil → Pagos y suscripciones → Suscripciones. También puedes llegar desde la app, en la pantalla de Wibblo Pro → «Administrar suscripción». Pro sigue activo hasta el final del período que ya pagaste.</p></details><details><summary>¿Cómo restauro mis compras?</summary><p>Abre la pantalla de Wibblo Pro y toca «Restaurar compras», con la misma cuenta de Apple o de Google con la que compraste. La app también lo revisa sola cada vez que la abres.</p></details><details><summary>¿En qué idiomas está Wibblo?</summary><p>En español, inglés, francés y portugués. La primera vez usa el idioma de tu teléfono y lo puedes cambiar cuando quieras en Ajustes. El contenido listo también está en cada idioma.</p></details><details><summary>¿Necesito una cuenta o internet?</summary><p>No. Wibblo no pide cuenta y funciona sin internet, salvo para comprar o restaurar Pro. Tus fichas se guardan solo en tu teléfono.</p></details></div>
+  </section>
+
+  <section class="cta">
+    <img src="img/mascota/celebrating.webp" width="200" height="200" alt="" loading="lazy">
+    <div>
+      <h2>Crea tu primera ficha hoy</h2>
+      <p>Descarga Wibblo gratis y prueba las 12 actividades.</p>
+      <div class="stores">
+        <a class="store appstore" href="https://apps.apple.com/app/id6819557562"><span class="yours">Tu tienda</span><img src="badges/app-store-es.svg" width="168" height="56" alt="Descárgalo en el App Store"></a>
+        <a class="store play" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><span class="yours">Tu tienda</span><img src="badges/google-play-es.png" width="188" height="56" alt="Disponible en Google Play"></a>
+      </div>
+    </div>
   </section>
 </main>
-<footer>Wibblo · <a href="https://kaeliapps.com/">Kaeli</a></footer>
+
+<footer class="foot">
+  <nav>
+    <a href="privacidad/">Política de privacidad</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Términos de uso</a>
+    <a href="mailto:wearekaeli@gmail.com">Contacto</a>
+    <a href="https://kaeliapps.com/">Una app de Kaeli</a>
+  </nav>
+  <p>© Kaeli · Wibblo</p>
+</footer>
+
+<dialog class="lightbox" aria-label="Fichas reales hechas con Wibblo">
+  <button class="close" type="button" aria-label="Cerrar">×</button>
+  <img alt="">
+  <p class="caption"></p>
+</dialog>
+<script id="strings" type="application/json">{"video": "Video", "close": "Cerrar"}</script>
 </body>
 </html>
