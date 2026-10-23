@@ -9,23 +9,25 @@
 <link rel="canonical" href="https://wibblo.kaeliapps.com/descargar/">
 <!-- Imagen al compartir el enlace (1200x630, la de Kaeli, publicada en kaeliapps.com). -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Kaeli">
+<meta property="og:site_name" content="Wibblo">
 <meta property="og:title" content="Wibblo">
 <meta property="og:description" content="Fichas imprimibles: bingo, sopa de letras, crucigramas y más. / Printable activities: bingo, word search, crosswords and more.">
 <meta property="og:url" content="https://wibblo.kaeliapps.com/descargar/">
-<meta property="og:image" content="https://kaeliapps.com/og-image.png">
+<meta property="og:image" content="https://wibblo.kaeliapps.com/og-wibblo.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Kaeli">
+<meta property="og:image:alt" content="Wibblo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wibblo">
-<meta name="twitter:image" content="https://kaeliapps.com/og-image.png">
+<meta name="twitter:image" content="https://wibblo.kaeliapps.com/og-wibblo.png">
 <!--
   Página de descarga de Wibblo (/descargar/; /download/ lleva aquí).
-  - Android: redirige a Google Play.
+  - Android: redirige a Google Play. Mientras ANDROID_DISPONIBLE sea false (../ajustes.js),
+    muestra «Próximamente en Google Play» y el enlace a la página principal.
   - iPhone/iPad: redirige al App Store (Apple ID 6819557562).
   - Computadora o sin JavaScript: muestra los dos botones.
 -->
+<script src="../ajustes.js"></script>
 <script>
   (function () {
     var html = document.documentElement;
@@ -41,7 +43,10 @@
       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     var play = 'https://play.google.com/store/apps/details?id=com.kaeli.wibblo';
     var appStore = 'https://apps.apple.com/app/id6819557562';
-    if (android) { location.replace(play); return; }
+    if (android) {
+      if (ANDROID_DISPONIBLE) { location.replace(play); return; }
+      html.className += ' android';
+    }
     if (ios) {
       html.className += ' ios';
       location.replace(appStore); return;
@@ -61,6 +66,12 @@
   .store { display:inline-block; line-height:0; }
   .store img { height:56px; width:auto; }
   .store[hidden] { display:none; }
+  /* Sin Google Play todavía (ajustes.js): etiqueta sin enlace en lugar de la insignia de Google. */
+  .play-soon, .android-note { display:none; }
+  .android-soon .store.play { display:none; }
+  .android-soon .play-soon { display:inline-flex; align-items:center; height:56px; padding:0 18px; border-radius:12px; border:2px dashed var(--accent); color:var(--accent); font-weight:700; }
+  .android-soon.android .android-note { display:block; margin:20px 0 0; }
+  .android-note a { color:var(--accent); font-weight:700; }
   .links { margin-top:32px; font-size:.9rem; }
   .links a { color:var(--accent); font-weight:600; text-decoration:none; margin:0 8px; }
   footer { text-align:center; color:var(--muted); font-size:.85rem; padding:0 16px 32px; }
@@ -83,8 +94,10 @@
     <p class="tagline">Fichas imprimibles: bingo, sopa de letras, crucigramas y más.</p>
     <div class="stores">
       <a class="store appstore" href="https://apps.apple.com/app/id6819557562"><img src="../badges/app-store-es.svg" width="168" height="56" alt="Descárgalo en el App Store"></a>
-      <a class="store" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><img src="../badges/google-play-es.png" width="188" height="56" alt="Descargar en Google Play"></a>
+      <a class="store play" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><img src="../badges/google-play-es.png" width="188" height="56" alt="Descargar en Google Play"></a>
+      <span class="play-soon">Próximamente en Google Play</span>
     </div>
+    <p class="android-note"><a href="../">Conoce Wibblo y sus actividades</a></p>
     <p class="links"><a href="../privacidad/">Política de privacidad</a><a href="#en">English</a></p>
   </section>
 
@@ -93,8 +106,10 @@
     <p class="tagline">Printable activities: bingo, word search, crosswords and more.</p>
     <div class="stores">
       <a class="store appstore" href="https://apps.apple.com/app/id6819557562"><img src="../badges/app-store-en.svg" width="168" height="56" alt="Download on the App Store"></a>
-      <a class="store" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><img src="../badges/google-play-en.png" width="188" height="56" alt="Get it on Google Play"></a>
+      <a class="store play" href="https://play.google.com/store/apps/details?id=com.kaeli.wibblo"><img src="../badges/google-play-en.png" width="188" height="56" alt="Get it on Google Play"></a>
+      <span class="play-soon">Coming soon to Google Play</span>
     </div>
+    <p class="android-note"><a href="../en/">Discover Wibblo and its activities</a></p>
     <p class="links"><a href="../privacidad/#en">Privacy Policy</a><a href="#es">Español</a></p>
   </section>
 </main>

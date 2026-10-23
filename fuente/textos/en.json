@@ -21,7 +21,8 @@
   },
   "badges": {
     "app_store_alt": "Download on the App Store",
-    "google_play_alt": "Get it on Google Play"
+    "google_play_alt": "Get it on Google Play",
+    "play_soon": "Coming soon to Google Play"
   },
   "generators": {
     "title": "12 activities in one app",
@@ -32,18 +33,54 @@
       "math": "Math"
     },
     "items": {
-      "bingo": ["Bingo", "Bingo cards with words, numbers, images or questions"],
-      "pairs": ["Pairs Game", "Pairs games to print and cut out, with images, words or questions"],
-      "domino": ["Educational Domino", "Domino tiles to chain together, with images, words or questions"],
-      "wordsearch": ["Word Search", "Word searches with the words you choose"],
-      "crossword": ["Crossword", "Crosswords with the words and clues you define"],
-      "matching": ["Matching", "Match each item in one column with its partner in the other"],
-      "flashcards": ["Flashcards", "Cards to memorize words with their definition or translation"],
-      "secretcode": ["Secret Code", "Coded messages using symbols, numbers or math operations to decode"],
-      "answerpath": ["Answer Path", "Multiple-choice step paths to solve in order"],
-      "math": ["Math Worksheet", "Practice sheets with addition, subtraction, multiplication and division"],
-      "colorsolve": ["Color By Solving", "Templates to color in by solving math exercises"],
-      "sudoku": ["Sudoku", "4×4 or 9×9 sudoku boards with three difficulty levels"]
+      "bingo": [
+        "Bingo",
+        "Bingo cards with words, numbers, images or questions"
+      ],
+      "pairs": [
+        "Pairs Game",
+        "Pairs games to print and cut out, with images, words or questions"
+      ],
+      "domino": [
+        "Educational Domino",
+        "Domino tiles to chain together, with images, words or questions"
+      ],
+      "wordsearch": [
+        "Word Search",
+        "Word searches with the words you choose"
+      ],
+      "crossword": [
+        "Crossword",
+        "Crosswords with the words and clues you define"
+      ],
+      "matching": [
+        "Matching",
+        "Match each item in one column with its partner in the other"
+      ],
+      "flashcards": [
+        "Flashcards",
+        "Cards to memorize words with their definition or translation"
+      ],
+      "secretcode": [
+        "Secret Code",
+        "Coded messages using symbols, numbers or math operations to decode"
+      ],
+      "answerpath": [
+        "Answer Path",
+        "Multiple-choice step paths to solve in order"
+      ],
+      "math": [
+        "Math Worksheet",
+        "Practice sheets with addition, subtraction, multiplication and division"
+      ],
+      "colorsolve": [
+        "Color By Solving",
+        "Templates to color in by solving math exercises"
+      ],
+      "sudoku": [
+        "Sudoku",
+        "4×4 or 9×9 sudoku boards with three difficulty levels"
+      ]
     }
   },
   "gallery": {
@@ -55,9 +92,18 @@
   "how": {
     "title": "How it works",
     "steps": [
-      ["Pick an activity", "Bingo, word search, crossword, math and more."],
-      ["Type your words or use ready-made content", "Add your own words, questions or numbers, or pick a ready-made topic."],
-      ["Export to PDF and print", "Check the preview, export the worksheet and share it or print it."]
+      [
+        "Pick an activity",
+        "Bingo, word search, crossword, math and more."
+      ],
+      [
+        "Type your words or use ready-made content",
+        "Add your own words, questions or numbers, or pick a ready-made topic."
+      ],
+      [
+        "Export to PDF and print",
+        "Check the preview, export the worksheet and share it or print it."
+      ]
     ]
   },
   "tutorials": {
@@ -138,12 +184,30 @@
   "faq": {
     "title": "Frequently asked questions",
     "items": [
-      ["How do I print double-sided?", "Some worksheets have a back side: bingo cards with a decorative back, double-sided flashcards and pairs or domino cards with backs. Turn on double-sided printing on your printer. For portrait pages, flip on the long edge; for landscape pages (bingo with 2 cards per page), flip on the short edge. If your printer can't print double-sided, print the odd pages first, put the paper back in and then print the even pages."],
-      ["What is the QR code at the bottom of the worksheets?", "It leads to this page, so anyone who gets a worksheet knows how it was made and can download Wibblo. With Wibblo Pro you can hide the footer in Settings."],
-      ["How do I cancel my subscription?", "On iPhone or iPad: Settings → your name → Subscriptions → Wibblo Pro. On Android: Google Play → your profile → Payments & subscriptions → Subscriptions. You can also get there from the app, on the Wibblo Pro screen → “Manage subscription”. Pro stays active until the end of the period you already paid for."],
-      ["How do I restore my purchases?", "Open the Wibblo Pro screen and tap “Restore purchases”, using the same Apple or Google account you bought with. The app also checks automatically every time you open it."],
-      ["Which languages is Wibblo in?", "Spanish, English, French and Portuguese. The first time it uses your phone's language, and you can change it anytime in Settings. Ready-made content is available in each language too."],
-      ["Do I need an account or internet?", "No. Wibblo doesn't ask for an account and works offline, except to buy or restore Pro. Your worksheets are saved only on your phone."]
+      [
+        "How do I print double-sided?",
+        "Some worksheets have a back side: bingo cards with a decorative back, double-sided flashcards and pairs or domino cards with backs. Turn on double-sided printing on your printer. For portrait pages, flip on the long edge; for landscape pages (bingo with 2 cards per page), flip on the short edge. If your printer can't print double-sided, print the odd pages first, put the paper back in and then print the even pages."
+      ],
+      [
+        "What is the QR code at the bottom of the worksheets?",
+        "It leads to this page, so anyone who gets a worksheet knows how it was made and can download Wibblo. With Wibblo Pro you can hide the footer in Settings."
+      ],
+      [
+        "How do I cancel my subscription?",
+        "On iPhone or iPad: Settings → your name → Subscriptions → Wibblo Pro. On Android: Google Play → your profile → Payments & subscriptions → Subscriptions. You can also get there from the app, on the Wibblo Pro screen → “Manage subscription”. Pro stays active until the end of the period you already paid for."
+      ],
+      [
+        "How do I restore my purchases?",
+        "Open the Wibblo Pro screen and tap “Restore purchases”, using the same Apple or Google account you bought with. The app also checks automatically every time you open it."
+      ],
+      [
+        "Which languages is Wibblo in?",
+        "Spanish, English, French and Portuguese. The first time it uses your phone's language, and you can change it anytime in Settings. Ready-made content is available in each language too."
+      ],
+      [
+        "Do I need an account or internet?",
+        "No. Wibblo doesn't ask for an account and works offline, except to buy or restore Pro. Your worksheets are saved only on your phone."
+      ]
     ]
   },
   "cta": {

@@ -21,7 +21,8 @@
   },
   "badges": {
     "app_store_alt": "Descárgalo en el App Store",
-    "google_play_alt": "Disponible en Google Play"
+    "google_play_alt": "Disponible en Google Play",
+    "play_soon": "Próximamente en Google Play"
   },
   "generators": {
     "title": "12 actividades en una sola app",
@@ -32,18 +33,54 @@
       "math": "Matemáticas"
     },
     "items": {
-      "bingo": ["Bingo", "Cartones de bingo con palabras, números, imágenes o preguntas"],
-      "pairs": ["Parejas", "Juegos de parejas para imprimir y recortar, con imágenes, palabras o preguntas"],
-      "domino": ["Dominó educativo", "Fichas de dominó para armar en cadena, con imágenes, palabras o preguntas"],
-      "wordsearch": ["Sopa de letras", "Sopas de letras con las palabras que tú elijas"],
-      "crossword": ["Crucigrama", "Crucigramas con las palabras y pistas que tú definas"],
-      "matching": ["Relaciona columnas", "Une cada elemento de una columna con su pareja de la otra"],
-      "flashcards": ["Tarjetas de vocabulario", "Tarjetas para memorizar palabras con su definición o traducción"],
-      "secretcode": ["Código secreto", "Mensajes codificados con símbolos, números u operaciones matemáticas para descifrar"],
-      "answerpath": ["Camino de respuestas", "Caminos de pasos con opción múltiple para resolver en orden"],
-      "math": ["Generador de matemáticas", "Hojas de práctica con sumas, restas, multiplicaciones y divisiones"],
-      "colorsolve": ["Colorea resolviendo", "Plantillas para colorear resolviendo ejercicios matemáticos"],
-      "sudoku": ["Sudoku", "Tableros de sudoku en 4×4 o 9×9 con tres niveles de dificultad"]
+      "bingo": [
+        "Bingo",
+        "Cartones de bingo con palabras, números, imágenes o preguntas"
+      ],
+      "pairs": [
+        "Parejas",
+        "Juegos de parejas para imprimir y recortar, con imágenes, palabras o preguntas"
+      ],
+      "domino": [
+        "Dominó educativo",
+        "Fichas de dominó para armar en cadena, con imágenes, palabras o preguntas"
+      ],
+      "wordsearch": [
+        "Sopa de letras",
+        "Sopas de letras con las palabras que tú elijas"
+      ],
+      "crossword": [
+        "Crucigrama",
+        "Crucigramas con las palabras y pistas que tú definas"
+      ],
+      "matching": [
+        "Relaciona columnas",
+        "Une cada elemento de una columna con su pareja de la otra"
+      ],
+      "flashcards": [
+        "Tarjetas de vocabulario",
+        "Tarjetas para memorizar palabras con su definición o traducción"
+      ],
+      "secretcode": [
+        "Código secreto",
+        "Mensajes codificados con símbolos, números u operaciones matemáticas para descifrar"
+      ],
+      "answerpath": [
+        "Camino de respuestas",
+        "Caminos de pasos con opción múltiple para resolver en orden"
+      ],
+      "math": [
+        "Generador de matemáticas",
+        "Hojas de práctica con sumas, restas, multiplicaciones y divisiones"
+      ],
+      "colorsolve": [
+        "Colorea resolviendo",
+        "Plantillas para colorear resolviendo ejercicios matemáticos"
+      ],
+      "sudoku": [
+        "Sudoku",
+        "Tableros de sudoku en 4×4 o 9×9 con tres niveles de dificultad"
+      ]
     }
   },
   "gallery": {
@@ -55,9 +92,18 @@
   "how": {
     "title": "Cómo funciona",
     "steps": [
-      ["Elige la actividad", "Bingo, sopa de letras, crucigrama, matemáticas y más."],
-      ["Escribe tus palabras o usa contenido listo", "Pon tus propias palabras, preguntas o números, o elige un tema ya preparado."],
-      ["Exporta a PDF e imprime", "Revisa la vista previa, exporta la ficha y compártela o imprímela."]
+      [
+        "Elige la actividad",
+        "Bingo, sopa de letras, crucigrama, matemáticas y más."
+      ],
+      [
+        "Escribe tus palabras o usa contenido listo",
+        "Pon tus propias palabras, preguntas o números, o elige un tema ya preparado."
+      ],
+      [
+        "Exporta a PDF e imprime",
+        "Revisa la vista previa, exporta la ficha y compártela o imprímela."
+      ]
     ]
   },
   "tutorials": {
@@ -138,12 +184,30 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "items": [
-      ["¿Cómo imprimo a doble cara?", "Algunas fichas llevan reverso: los cartones de bingo con reverso decorativo, las tarjetas de vocabulario a doble cara y las cartas de parejas o dominó con reverso. Activa la impresión a doble cara en tu impresora. En las hojas verticales, voltea por el borde largo; en las apaisadas (bingo con 2 cartones por hoja), por el borde corto. Si tu impresora no imprime a doble cara, imprime primero las hojas impares, vuelve a poner el papel y luego imprime las pares."],
-      ["¿Para qué es el código QR al pie de las fichas?", "Lleva a esta página, para que quien reciba una ficha sepa con qué se hizo y pueda descargar Wibblo. Con Wibblo Pro puedes ocultar el pie desde Ajustes."],
-      ["¿Cómo cancelo la suscripción?", "En iPhone o iPad: Ajustes → tu nombre → Suscripciones → Wibblo Pro. En Android: Google Play → tu perfil → Pagos y suscripciones → Suscripciones. También puedes llegar desde la app, en la pantalla de Wibblo Pro → «Administrar suscripción». Pro sigue activo hasta el final del período que ya pagaste."],
-      ["¿Cómo restauro mis compras?", "Abre la pantalla de Wibblo Pro y toca «Restaurar compras», con la misma cuenta de Apple o de Google con la que compraste. La app también lo revisa sola cada vez que la abres."],
-      ["¿En qué idiomas está Wibblo?", "En español, inglés, francés y portugués. La primera vez usa el idioma de tu teléfono y lo puedes cambiar cuando quieras en Ajustes. El contenido listo también está en cada idioma."],
-      ["¿Necesito una cuenta o internet?", "No. Wibblo no pide cuenta y funciona sin internet, salvo para comprar o restaurar Pro. Tus fichas se guardan solo en tu teléfono."]
+      [
+        "¿Cómo imprimo a doble cara?",
+        "Algunas fichas llevan reverso: los cartones de bingo con reverso decorativo, las tarjetas de vocabulario a doble cara y las cartas de parejas o dominó con reverso. Activa la impresión a doble cara en tu impresora. En las hojas verticales, voltea por el borde largo; en las apaisadas (bingo con 2 cartones por hoja), por el borde corto. Si tu impresora no imprime a doble cara, imprime primero las hojas impares, vuelve a poner el papel y luego imprime las pares."
+      ],
+      [
+        "¿Para qué es el código QR al pie de las fichas?",
+        "Lleva a esta página, para que quien reciba una ficha sepa con qué se hizo y pueda descargar Wibblo. Con Wibblo Pro puedes ocultar el pie desde Ajustes."
+      ],
+      [
+        "¿Cómo cancelo la suscripción?",
+        "En iPhone o iPad: Ajustes → tu nombre → Suscripciones → Wibblo Pro. En Android: Google Play → tu perfil → Pagos y suscripciones → Suscripciones. También puedes llegar desde la app, en la pantalla de Wibblo Pro → «Administrar suscripción». Pro sigue activo hasta el final del período que ya pagaste."
+      ],
+      [
+        "¿Cómo restauro mis compras?",
+        "Abre la pantalla de Wibblo Pro y toca «Restaurar compras», con la misma cuenta de Apple o de Google con la que compraste. La app también lo revisa sola cada vez que la abres."
+      ],
+      [
+        "¿En qué idiomas está Wibblo?",
+        "En español, inglés, francés y portugués. La primera vez usa el idioma de tu teléfono y lo puedes cambiar cuando quieras en Ajustes. El contenido listo también está en cada idioma."
+      ],
+      [
+        "¿Necesito una cuenta o internet?",
+        "No. Wibblo no pide cuenta y funciona sin internet, salvo para comprar o restaurar Pro. Tus fichas se guardan solo en tu teléfono."
+      ]
     ]
   },
   "cta": {

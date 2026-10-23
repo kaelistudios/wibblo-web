@@ -50,6 +50,7 @@ def badges(t, base, lang, extra=''):
     return f'''<div class="stores{extra}">
         <a class="store appstore" href="{APP_STORE}"><span class="yours">{e(t['hero']['your_store'])}</span><img src="{base}badges/app-store-{lang}.svg" width="168" height="56" alt="{e(t['badges']['app_store_alt'])}"></a>
         <a class="store play" href="{PLAY}"><span class="yours">{e(t['hero']['your_store'])}</span><img src="{base}badges/google-play-{lang}.png" width="188" height="56" alt="{e(t['badges']['google_play_alt'])}"></a>
+        <span class="store play-soon">{e(t['badges']['play_soon'])}</span>
       </div>'''
 
 
@@ -143,12 +144,15 @@ def page(lang, t):
 <meta property="og:title" content="{e(t['meta']['title'])}">
 <meta property="og:description" content="{e(t['meta']['description'])}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="https://kaeliapps.com/og-image.png">
+<meta property="og:image" content="{SITE}/og-wibblo.png">
+<meta property="og:image:alt" content="Wibblo">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SITE}/og-wibblo.png">
 <link rel="preload" href="{base}fonts/Fredoka-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{base}estilos.css">
+<script src="{base}ajustes.js"></script>
 <script>
   // Teléfono: resaltar la tienda que corresponde. Raíz en español: llevar a su idioma
   // a quien tiene el teléfono en inglés, francés o portugués (salvo que haya elegido idioma).

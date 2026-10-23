@@ -135,6 +135,21 @@ a { color: var(--brand); }
 .ios .play, .android .appstore { opacity: .5; }
 .ios .play img, .android .appstore img { height: 44px; }
 
+/* Mientras Google no apruebe producción (ajustes.js → ANDROID_DISPONIBLE = false): en lugar de la
+   insignia de Google Play, una etiqueta de la página sin enlace. */
+.play-soon { display: none; }
+.android-soon .play { display: none; }
+.android-soon .play-soon {
+  display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 22px;
+  border-radius: 14px; border: 2px dashed var(--brand); background: var(--brand-soft); color: var(--brand-deep);
+  font: 700 1rem "Fredoka", "Nunito", sans-serif; line-height: 1.2; text-align: center;
+}
+.cta .android-soon .play-soon, .android-soon .cta .play-soon { background: rgba(255, 255, 255, .16); border-color: #fff; color: #fff; }
+/* En Android, sin Google Play todavía: el App Store se ve normal y nada se marca como «Tu tienda». */
+.android-soon.android .appstore { opacity: 1; }
+.android-soon.android .appstore img { height: 56px; }
+.android-soon.android .play-soon { order: -1; }
+
 /* Actividades */
 .cats { display: grid; gap: 20px; }
 .cat { border-radius: var(--radius); padding: 22px; }

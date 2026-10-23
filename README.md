@@ -16,6 +16,15 @@ Sitio de Wibblo, publicado con GitHub Pages desde este repo (rama `main`).
 - `/privacidad/`: política de privacidad de Wibblo (la que se declara en
   Google Play Console y la que abre la app desde Ajustes).
 
+**Google Play todavía no:** mientras Google no apruebe Wibblo en producción,
+`ajustes.js` tiene `ANDROID_DISPONIBLE = false`. Así, la página principal
+muestra «Próximamente en Google Play» (sin la insignia ni el enlace de Google)
+y `/descargar/` en Android muestra ese mensaje con el enlace a la página
+principal. El día que aprueben: cambiar a `true`, commit y push (no hace falta
+volver a armar nada).
+
+La imagen al compartir es `og-wibblo.png` (1200×630).
+
 **No cambiar** `/privacidad/`: es la dirección registrada en App Store Connect
 y Google Play. Los términos de uso son el EULA estándar de Apple.
 

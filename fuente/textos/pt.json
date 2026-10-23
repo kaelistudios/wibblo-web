@@ -21,7 +21,8 @@
   },
   "badges": {
     "app_store_alt": "Baixar na App Store",
-    "google_play_alt": "Disponível no Google Play"
+    "google_play_alt": "Disponível no Google Play",
+    "play_soon": "Em breve no Google Play"
   },
   "generators": {
     "title": "12 atividades em um só app",
@@ -32,18 +33,54 @@
       "math": "Matemática"
     },
     "items": {
-      "bingo": ["Bingo", "Cartelas de bingo com palavras, números, imagens ou perguntas"],
-      "pairs": ["Pares", "Jogos de pares para imprimir e recortar, com imagens, palavras ou perguntas"],
-      "domino": ["Dominó educativo", "Peças de dominó para encadear, com imagens, palavras ou perguntas"],
-      "wordsearch": ["Caça-palavras", "Caça-palavras com as palavras que você escolher"],
-      "crossword": ["Palavras cruzadas", "Palavras cruzadas com as palavras e dicas que você definir"],
-      "matching": ["Ligue as colunas", "Ligue cada item de uma coluna ao seu par na outra"],
-      "flashcards": ["Cartões de vocabulário", "Cartões para memorizar palavras com sua definição ou tradução"],
-      "secretcode": ["Código secreto", "Mensagens codificadas com símbolos, números ou operações matemáticas para decifrar"],
-      "answerpath": ["Caminho de respostas", "Caminhos de etapas de múltipla escolha para resolver em ordem"],
-      "math": ["Gerador de matemática", "Folhas de exercícios de soma, subtração, multiplicação e divisão"],
-      "colorsolve": ["Colorir resolvendo", "Modelos para colorir resolvendo exercícios de matemática"],
-      "sudoku": ["Sudoku", "Tabuleiros de sudoku 4×4 ou 9×9 com três níveis de dificuldade"]
+      "bingo": [
+        "Bingo",
+        "Cartelas de bingo com palavras, números, imagens ou perguntas"
+      ],
+      "pairs": [
+        "Pares",
+        "Jogos de pares para imprimir e recortar, com imagens, palavras ou perguntas"
+      ],
+      "domino": [
+        "Dominó educativo",
+        "Peças de dominó para encadear, com imagens, palavras ou perguntas"
+      ],
+      "wordsearch": [
+        "Caça-palavras",
+        "Caça-palavras com as palavras que você escolher"
+      ],
+      "crossword": [
+        "Palavras cruzadas",
+        "Palavras cruzadas com as palavras e dicas que você definir"
+      ],
+      "matching": [
+        "Ligue as colunas",
+        "Ligue cada item de uma coluna ao seu par na outra"
+      ],
+      "flashcards": [
+        "Cartões de vocabulário",
+        "Cartões para memorizar palavras com sua definição ou tradução"
+      ],
+      "secretcode": [
+        "Código secreto",
+        "Mensagens codificadas com símbolos, números ou operações matemáticas para decifrar"
+      ],
+      "answerpath": [
+        "Caminho de respostas",
+        "Caminhos de etapas de múltipla escolha para resolver em ordem"
+      ],
+      "math": [
+        "Gerador de matemática",
+        "Folhas de exercícios de soma, subtração, multiplicação e divisão"
+      ],
+      "colorsolve": [
+        "Colorir resolvendo",
+        "Modelos para colorir resolvendo exercícios de matemática"
+      ],
+      "sudoku": [
+        "Sudoku",
+        "Tabuleiros de sudoku 4×4 ou 9×9 com três níveis de dificuldade"
+      ]
     }
   },
   "gallery": {
@@ -55,9 +92,18 @@
   "how": {
     "title": "Como funciona",
     "steps": [
-      ["Escolha a atividade", "Bingo, caça-palavras, palavras cruzadas, matemática e mais."],
-      ["Escreva suas palavras ou use conteúdo pronto", "Coloque suas próprias palavras, perguntas ou números, ou escolha um tema já preparado."],
-      ["Exporte em PDF e imprima", "Confira a pré-visualização, exporte a ficha e compartilhe ou imprima."]
+      [
+        "Escolha a atividade",
+        "Bingo, caça-palavras, palavras cruzadas, matemática e mais."
+      ],
+      [
+        "Escreva suas palavras ou use conteúdo pronto",
+        "Coloque suas próprias palavras, perguntas ou números, ou escolha um tema já preparado."
+      ],
+      [
+        "Exporte em PDF e imprima",
+        "Confira a pré-visualização, exporte a ficha e compartilhe ou imprima."
+      ]
     ]
   },
   "tutorials": {
@@ -138,12 +184,30 @@
   "faq": {
     "title": "Perguntas frequentes",
     "items": [
-      ["Como imprimo frente e verso?", "Algumas fichas têm verso: as cartelas de bingo com verso decorativo, os cartões de vocabulário frente e verso e as cartas de pares ou dominó com verso. Ative a impressão frente e verso na sua impressora. Nas páginas em retrato, vire pela borda longa; nas páginas em paisagem (bingo com 2 cartelas por página), pela borda curta. Se a sua impressora não imprime frente e verso, imprima primeiro as páginas ímpares, coloque o papel de volta e depois imprima as pares."],
-      ["Para que serve o código QR no rodapé das fichas?", "Ele leva a esta página, para que quem receber uma ficha saiba como ela foi feita e possa baixar o Wibblo. Com o Wibblo Pro, você pode ocultar o rodapé nos Ajustes."],
-      ["Como cancelo a assinatura?", "No iPhone ou iPad: Ajustes → seu nome → Assinaturas → Wibblo Pro. No Android: Google Play → seu perfil → Pagamentos e assinaturas → Assinaturas. Você também pode chegar lá pelo app, na tela do Wibblo Pro → “Gerenciar assinatura”. O Pro continua ativo até o fim do período que você já pagou."],
-      ["Como restauro minhas compras?", "Abra a tela do Wibblo Pro e toque em “Restaurar compras”, com a mesma conta Apple ou Google que você usou para comprar. O app também verifica sozinho toda vez que você o abre."],
-      ["Em quais idiomas está o Wibblo?", "Em espanhol, inglês, francês e português. Na primeira vez, ele usa o idioma do seu celular, e você pode mudar quando quiser nos Ajustes. O conteúdo pronto também está em cada idioma."],
-      ["Preciso de uma conta ou de internet?", "Não. O Wibblo não pede conta e funciona sem internet, exceto para comprar ou restaurar o Pro. Suas fichas ficam salvas só no seu celular."]
+      [
+        "Como imprimo frente e verso?",
+        "Algumas fichas têm verso: as cartelas de bingo com verso decorativo, os cartões de vocabulário frente e verso e as cartas de pares ou dominó com verso. Ative a impressão frente e verso na sua impressora. Nas páginas em retrato, vire pela borda longa; nas páginas em paisagem (bingo com 2 cartelas por página), pela borda curta. Se a sua impressora não imprime frente e verso, imprima primeiro as páginas ímpares, coloque o papel de volta e depois imprima as pares."
+      ],
+      [
+        "Para que serve o código QR no rodapé das fichas?",
+        "Ele leva a esta página, para que quem receber uma ficha saiba como ela foi feita e possa baixar o Wibblo. Com o Wibblo Pro, você pode ocultar o rodapé nos Ajustes."
+      ],
+      [
+        "Como cancelo a assinatura?",
+        "No iPhone ou iPad: Ajustes → seu nome → Assinaturas → Wibblo Pro. No Android: Google Play → seu perfil → Pagamentos e assinaturas → Assinaturas. Você também pode chegar lá pelo app, na tela do Wibblo Pro → “Gerenciar assinatura”. O Pro continua ativo até o fim do período que você já pagou."
+      ],
+      [
+        "Como restauro minhas compras?",
+        "Abra a tela do Wibblo Pro e toque em “Restaurar compras”, com a mesma conta Apple ou Google que você usou para comprar. O app também verifica sozinho toda vez que você o abre."
+      ],
+      [
+        "Em quais idiomas está o Wibblo?",
+        "Em espanhol, inglês, francês e português. Na primeira vez, ele usa o idioma do seu celular, e você pode mudar quando quiser nos Ajustes. O conteúdo pronto também está em cada idioma."
+      ],
+      [
+        "Preciso de uma conta ou de internet?",
+        "Não. O Wibblo não pede conta e funciona sem internet, exceto para comprar ou restaurar o Pro. Suas fichas ficam salvas só no seu celular."
+      ]
     ]
   },
   "cta": {
