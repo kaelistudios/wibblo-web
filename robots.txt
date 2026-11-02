@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wibblo.kaeliapps.com/sitemap.xml
