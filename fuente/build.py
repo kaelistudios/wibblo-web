@@ -21,6 +21,10 @@ APP_STORE = 'https://apps.apple.com/app/id6819557562'
 PLAY = 'https://play.google.com/store/apps/details?id=com.kaeli.wibblo'
 EULA = 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'
 CONTACT = 'wearekaeli@gmail.com'
+# Cloudflare Web Analytics (sin cookies ni datos personales): ver el README de kaelistudios.github.io.
+ANALYTICS = ('<!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->'
+             '<script defer src=\'https://static.cloudflareinsights.com/beacon.min.js\' '
+             'data-cf-beacon=\'{"token": "67a3142fce89416aa6cee8fe54237c55"}\'></script>')
 
 # Categorías y generadores en el mismo orden que el inicio de la app.
 CATEGORIES = [
@@ -274,6 +278,7 @@ def page(lang, t):
   <p class="caption"></p>
 </dialog>
 <script id="strings" type="application/json">{strings}</script>
+{ANALYTICS}
 </body>
 </html>
 '''
