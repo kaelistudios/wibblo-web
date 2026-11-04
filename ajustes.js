@@ -5,5 +5,5 @@
 //     siguen yendo al App Store).
 // El día que Google apruebe producción: cambiar a true, commit y push. Vuelven la insignia y la
 // redirección a Google Play.
-var ANDROID_DISPONIBLE = false;
+var ANDROID_DISPONIBLE = true;
 if (!ANDROID_DISPONIBLE) document.documentElement.className += ' android-soon';
