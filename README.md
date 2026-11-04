@@ -50,6 +50,16 @@ python3 fuente/build.py
   agregar un video basta con poner el archivo y su título, sin volver a armar
   la página: ver `tutoriales/LEEME.md`.
 
+**Correo de contacto:** todos los enlaces «Contacto» (pie de las 4 páginas y
+`/privacidad/`) van a `soporte+wibblo@kaeliapps.com`, con asunto «[Wibblo] » y la
+firma «—\nWibblo web · <idioma>» al final del cuerpo (espacios como `%20`, nunca
+`+`). En la página principal lo arma `support_mailto()` en `fuente/build.py`. Para
+revisar todos los `.html`:
+
+```bash
+node tools/check-mailto.mjs
+```
+
 Reglas de los textos: nunca presentar Wibblo como algo para el aula, la escuela
 o los maestros, en ningún idioma; nunca usar "Memory" ni "Memorama" (el juego
 se llama Parejas / Pairs Game / Paires / Pares); no escribir "próximamente";

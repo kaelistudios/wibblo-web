@@ -13,6 +13,7 @@ no necesitan volver a correr esto: ver tutoriales/LEEME.md.
 import html
 import json
 import os
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://wibblo.kaeliapps.com'
@@ -20,7 +21,9 @@ LANGS = ['es', 'en', 'fr', 'pt']
 APP_STORE = 'https://apps.apple.com/app/id6819557562'
 PLAY = 'https://play.google.com/store/apps/details?id=com.kaeli.wibblo'
 EULA = 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'
-CONTACT = 'wearekaeli@gmail.com'
+# Correo de soporte de Wibblo (ver support_mailto). Lo revisa tools/check-mailto.mjs.
+CONTACT = 'soporte+wibblo@kaeliapps.com'
+APP_NAME = 'Wibblo'
 # Cloudflare Web Analytics (sin cookies ni datos personales): ver el README de kaelistudios.github.io.
 ANALYTICS = ('<!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->'
              '<script defer src=\'https://static.cloudflareinsights.com/beacon.min.js\' '
@@ -48,6 +51,16 @@ GALLERY = ['bingo', 'pairs', 'wordsearch', 'crossword', 'secretcode', 'math',
 
 def e(s):
     return html.escape(s, quote=True)
+
+
+def support_mailto(lang):
+    """Enlace mailto de soporte: asunto «[Wibblo] » y firma «—\\nWibblo web · <idioma>».
+
+    Espacios como %20 (nunca '+'), como encodeURIComponent. Ya escapado para un href.
+    """
+    subject = quote(f'[{APP_NAME}] ', safe='')
+    body = quote(f'\n\n\n—\n{APP_NAME} web · {lang}', safe='')
+    return e(f'mailto:{CONTACT}?subject={subject}&body={body}')
 
 
 def badges(t, base, lang, extra=''):
@@ -266,7 +279,7 @@ def page(lang, t):
   <nav>
     <a href="{privacy}">{e(t['footer']['privacy'])}</a>
     <a href="{EULA}">{e(t['footer']['terms'])}</a>
-    <a href="mailto:{CONTACT}">{e(t['footer']['contact'])}</a>
+    <a href="{support_mailto(lang)}">{e(t['footer']['contact'])}</a>
     <a href="https://kaeliapps.com/">{e(t['footer']['kaeli'])}</a>
   </nav>
   <p>© Kaeli · Wibblo</p>
