@@ -244,7 +244,7 @@ a { color: var(--brand); }
 .cta .yours { background: #fff; }
 @media (max-width: 760px) { .cta { text-align: center; } .cta h2 { text-align: center; } .cta img { width: 140px; } .cta .store img { width: auto; } }
 .foot { border-top: 1px solid var(--line); padding: 28px 16px 40px; text-align: center; color: var(--muted); font-size: .92rem; }
-.foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; }
+.foot nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 22px; }
 .foot a { color: var(--ink); font-weight: 700; text-decoration: none; }
 .foot a:hover { color: var(--brand); }
 .foot p { margin: 14px 0 0; }
