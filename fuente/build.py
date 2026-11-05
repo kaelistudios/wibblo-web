@@ -280,7 +280,7 @@ def page(lang, t):
     <a href="{privacy}">{e(t['footer']['privacy'])}</a>
     <a href="{EULA}">{e(t['footer']['terms'])}</a>
     <a href="{support_mailto(lang)}">{e(t['footer']['contact'])}</a>
-    <a href="https://kaeliapps.com/">{e(t['footer']['kaeli'])}</a>
+    <a class="kaeli-link" href="https://kaeliapps.com/"><span>{e(t['footer']['by'])}</span><img src="https://kaeliapps.com/kaeli_logo_horizontal.png" alt="Kaeli" height="26" onerror="this.replaceWith(document.createTextNode('Kaeli'))"></a>
   </nav>
   <p>© Kaeli · Wibblo</p>
 </footer>

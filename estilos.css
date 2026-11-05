@@ -127,13 +127,10 @@ a { color: var(--brand); }
 .hero .stores, .cta .stores { justify-content: flex-start; }
 @media (max-width: 760px) { .hero .stores, .cta .stores { justify-content: center; } }
 .store { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; line-height: 0; text-decoration: none; transition: opacity .2s; }
-.store img { height: 56px; width: auto; }
+.store img { height: clamp(44px, 12.5vw, 56px); width: auto; }
 .yours { display: none; line-height: 1; font: 700 .8rem "Nunito", sans-serif; color: var(--brand); background: var(--brand-soft); padding: 5px 10px; border-radius: 999px; }
 .ios .appstore, .android .play { order: -1; }
-.ios .appstore img, .android .play img { height: 64px; }
 .ios .appstore .yours, .android .play .yours { display: block; }
-.ios .play, .android .appstore { opacity: .5; }
-.ios .play img, .android .appstore img { height: 44px; }
 
 /* Mientras Google no apruebe producción (ajustes.js → ANDROID_DISPONIBLE = false): en lugar de la
    insignia de Google Play, una etiqueta de la página sin enlace. */
@@ -245,10 +242,15 @@ a { color: var(--brand); }
 .cta h2 { text-align: left; color: #fff; }
 .cta p { margin: 8px 0 18px; opacity: .92; }
 .cta .yours { background: #fff; }
-.cta .ios .play, .cta .android .appstore { opacity: .7; }
-@media (max-width: 760px) { .cta { text-align: center; } .cta h2 { text-align: center; } .cta img { width: 140px; } }
+@media (max-width: 760px) { .cta { text-align: center; } .cta h2 { text-align: center; } .cta img { width: 140px; } .cta .store img { width: auto; } }
 .foot { border-top: 1px solid var(--line); padding: 28px 16px 40px; text-align: center; color: var(--muted); font-size: .92rem; }
 .foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; }
 .foot a { color: var(--ink); font-weight: 700; text-decoration: none; }
 .foot a:hover { color: var(--brand); }
 .foot p { margin: 14px 0 0; }
+/* Enlace a Kaeli: «Una app de» + logo, como en las demás webs de Kaeli */
+.foot .kaeli-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 4px 12px 4px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--muted); font-weight: 600; transition: border-color .2s; }
+.foot .kaeli-link:hover { border-color: var(--brand); color: var(--ink); }
+.kaeli-link img { display: block; height: 26px; width: auto; }
+/* El logo tiene letras azul marino: en tema oscuro va sobre una pastilla clara para que se lea */
+@media (prefers-color-scheme: dark) { .kaeli-link img { background: #fff; border-radius: 8px; padding: 3px 6px; box-sizing: content-box; height: 22px; } }
