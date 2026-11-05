@@ -65,7 +65,11 @@
   /* Insignias oficiales de Apple y Google, a la misma altura (guías de marca de cada tienda). */
   .stores { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px; }
   .store { display:inline-block; line-height:0; }
-  .store img { height:56px; width:auto; }
+  .store img {
+    height: clamp(44px, 12.5vw, 56px); width: auto; aspect-ratio: 3.2;
+    object-fit: cover; background: #000; border-radius: 8px;
+    outline: 1px solid #a6a6a6; outline-offset: -1px;
+  }
   .store[hidden] { display:none; }
   /* Sin Google Play todavía (ajustes.js): etiqueta sin enlace en lugar de la insignia de Google. */
   .play-soon, .android-note { display:none; }

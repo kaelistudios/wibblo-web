@@ -127,7 +127,11 @@ a { color: var(--brand); }
 .hero .stores, .cta .stores { justify-content: flex-start; }
 @media (max-width: 760px) { .hero .stores, .cta .stores { justify-content: center; } }
 .store { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; line-height: 0; text-decoration: none; transition: opacity .2s; }
-.store img { height: clamp(44px, 12.5vw, 56px); width: auto; }
+.store img {
+  height: clamp(44px, 12.5vw, 56px); width: auto; aspect-ratio: 3.2;
+  object-fit: cover; background: #000; border-radius: 8px;
+  outline: 1px solid #a6a6a6; outline-offset: -1px;
+}
 .yours { display: none; line-height: 1; font: 700 .8rem "Nunito", sans-serif; color: var(--brand); background: var(--brand-soft); padding: 5px 10px; border-radius: 999px; }
 .ios .appstore, .android .play { order: -1; }
 .ios .appstore .yours, .android .play .yours { display: block; }
